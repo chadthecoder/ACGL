@@ -5,6 +5,7 @@ project(openGL_vcpkg)
 find_package(glfw3 3.3 CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
+set(glm_DIR vcpkg_installed/x64-linux/include/glm)
 
 find_package(fmt CONFIG REQUIRED)
 
