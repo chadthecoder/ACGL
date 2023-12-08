@@ -27,7 +27,7 @@ add_library(${PROJECT_NAME} ${CPP})
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17 CXX_EXTENSIONS OFF)
 target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/include)
 #target_include_directories(${PROJECT_NAME} PRIVATE ${GLM_BINARY_DIR}/include)
-target_link_libraries(${PROJECT_NAME} PRIVATE glfw glad::glad glm fmt::fmt)
+target_link_libraries(${PROJECT_NAME} PRIVATE glfw glad::glad glm::glm fmt::fmt)
 
 #include_directories(include)
 #add_library(openGL_vcpkg .cpp)
