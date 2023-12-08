@@ -4,7 +4,7 @@ project(openGL_vcpkg)
 
 find_package(glfw3 3.3 CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
-find_package(glm CONFIG REQUIRED)
+#find_package(glm CONFIG REQUIRED)
 
 find_package(fmt CONFIG REQUIRED)
 
@@ -24,7 +24,8 @@ add_library(${PROJECT_NAME} ${CPP})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17 CXX_EXTENSIONS OFF)
 target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/include)
-target_link_libraries(${PROJECT_NAME} PRIVATE glfw glad::glad glm::glm fmt::fmt)
+target_include_directories(${PROJECT_NAME} PRIVATE "${GLM_BINARY_DIR}/include")
+target_link_libraries(${PROJECT_NAME} PRIVATE glfw glad::glad fmt::fmt)
 
 #include_directories(include)
 #add_library(openGL_vcpkg .cpp)
