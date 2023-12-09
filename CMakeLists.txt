@@ -1,11 +1,15 @@
 cmake_minimum_required(VERSION 3.16)
-
 project(openGL_vcpkg)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 find_package(glfw3 3.3 CONFIG REQUIRED)
+
+set(glad_DIR vcpkg_installed/x64-linux/share/glad)
 find_package(glad CONFIG REQUIRED)
 
-set(glm_DIR vcpkg_installed/x64-linux/include/glm)
+set(glm_DIR vcpkg_installed/x64-linux/share/glm)
 find_package(glm CONFIG REQUIRED)
 
 find_package(fmt CONFIG REQUIRED)
@@ -20,13 +24,14 @@ set(CPP ${CPP_DIR}/stb.cpp ${CPP_DIR}/VBO.cpp
 
 #add_subdirectory(src)
 include_directories(include)
+include_directories(vcpkg_installed/x64-linux/include)
 add_library(${PROJECT_NAME} ${CPP})
-
+#target_compile_features(${TARGET_NAME} PRIVATE cxx_std_17)
 #add_executable(${PROJECT_NAME} ${CPP})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17 CXX_EXTENSIONS OFF)
 target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/include)
-#target_include_directories(${PROJECT_NAME} PRIVATE ${GLM_BINARY_DIR}/include)
+target_include_directories(${PROJECT_NAME} PRIVATE vcpkg_installed/x64-linux/include)
 target_link_libraries(${PROJECT_NAME} PRIVATE glfw glad::glad glm::glm fmt::fmt)
 
 #include_directories(include)
