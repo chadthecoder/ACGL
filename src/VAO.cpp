@@ -1,4 +1,4 @@
-#include "VAO.hpp"
+#include "ACGL/VAO.hpp"
 
 // Constructor that generates a VAO ID
 VAO::VAO()

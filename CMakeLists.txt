@@ -14,7 +14,7 @@ find_package(glm CONFIG REQUIRED)
 
 find_package(fmt CONFIG REQUIRED)
 
-set(CPP_DIR src/ACGL)
+set(CPP_DIR src)
 #set(HPP_DIR include)
 set(CPP ${CPP_DIR}/stb.cpp ${CPP_DIR}/VBO.cpp
     ${CPP_DIR}/VAO.cpp ${CPP_DIR}/Shader.cpp ${CPP_DIR}/Texture.cpp

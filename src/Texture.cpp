@@ -1,4 +1,4 @@
-#include "Texture.hpp"
+#include "ACGL/Texture.hpp"
 
 Texture::Texture(const char* image, GLenum texType, GLenum slot, GLenum format, GLenum pixelType)
 {
