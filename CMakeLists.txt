@@ -14,7 +14,7 @@ find_package(glm CONFIG REQUIRED)
 
 find_package(fmt CONFIG REQUIRED)
 
-set(CPP_DIR src)
+set(CPP_DIR src/ACGL)
 #set(HPP_DIR include)
 set(CPP ${CPP_DIR}/stb.cpp ${CPP_DIR}/VBO.cpp
     ${CPP_DIR}/VAO.cpp ${CPP_DIR}/Shader.cpp ${CPP_DIR}/Texture.cpp
@@ -25,7 +25,7 @@ set(CPP ${CPP_DIR}/stb.cpp ${CPP_DIR}/VBO.cpp
 #add_subdirectory(src)
 include_directories(include)
 include_directories(vcpkg_installed/x64-linux/include)
-add_library(${PROJECT_NAME} ${CPP})
+add_library(${PROJECT_NAME} SHARED ${CPP})
 #target_compile_features(${TARGET_NAME} PRIVATE cxx_std_17)
 #add_executable(${PROJECT_NAME} ${CPP})
 
