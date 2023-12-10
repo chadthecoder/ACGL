@@ -15,7 +15,7 @@ GLFW::GLFW(const char *title, unsigned int width, unsigned int height) : title(t
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 	// Create a GLFWwindow object of 800 by 800 pixels, naming it "YoutubeOpenGL"
-	GLFWwindow* window = glfwCreateWindow(width, height, title, NULL, NULL);
+	window = glfwCreateWindow(width, height, title, NULL, NULL);
 	// Error check if the window fails to create
 	if (window == NULL)
 	{
@@ -25,7 +25,7 @@ GLFW::GLFW(const char *title, unsigned int width, unsigned int height) : title(t
 	}
     else
     {
-        std::cout << "window null\n";
+        std::cout << "window is not null\n";
     }
 	// Introduce the window into the current context
 	//glfwMakeContextCurrent(window);
