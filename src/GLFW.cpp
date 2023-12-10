@@ -23,6 +23,10 @@ GLFW::GLFW(const char *title, unsigned int width, unsigned int height) : title(t
 		glfwTerminate();
 		//return -1;
 	}
+    else
+    {
+        std::cout << "window null\n";
+    }
 	// Introduce the window into the current context
 	glfwMakeContextCurrent(window);
 }
