@@ -21,7 +21,7 @@ public:
 
     GLFWwindow* getWindow();
     int getShouldClose();
-    void makeContextCurrent();
+    //void makeContextCurrent();
     
 	// Binds the EBO
 	//void Bind();

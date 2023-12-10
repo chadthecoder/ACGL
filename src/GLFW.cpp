@@ -28,7 +28,7 @@ GLFW::GLFW(const char *title, unsigned int width, unsigned int height) : title(t
         std::cout << "window is not null\n";
     }
 	// Introduce the window into the current context
-	//glfwMakeContextCurrent(window);
+    glfwMakeContextCurrent(window);
 }
 
 // Binds the EBO
@@ -42,7 +42,7 @@ int GLFW::getShouldClose()
     return glfwWindowShouldClose(window);
 }
 
-void GLFW::makeContextCurrent()
+/* void GLFW::makeContextCurrent()
 {
     glfwMakeContextCurrent(window);
-}
+} */
