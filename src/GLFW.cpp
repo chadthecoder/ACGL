@@ -32,3 +32,8 @@ GLFWwindow* GLFW::getWindow()
 {
 	return window;
 }
+
+int GLFW::getShouldClose()
+{
+    return glfwWindowShouldClose(window);
+}

@@ -20,6 +20,7 @@ public:
 	GLFW(const char *title, unsigned int width, unsigned int height);
 
     GLFWwindow* getWindow();
+    int getShouldClose();
     
 	// Binds the EBO
 	//void Bind();
