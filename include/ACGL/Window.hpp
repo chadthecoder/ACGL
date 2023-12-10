@@ -1,12 +1,12 @@
-#ifndef GLFW_CLASS_H
-#define GLFW_CLASS_H
+#ifndef WINDOW_CLASS_H
+#define WINDOW_CLASS_H
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 #include <iostream>
 
-class GLFW
+class Window
 {
 public:
 	GLFWwindow* window;
@@ -17,7 +17,7 @@ public:
     // ID reference of Elements Buffer Object
 	//GLuint ID;
 	// Constructor that generates a Elements Buffer Object and links it to indices
-	GLFW(const char *title, unsigned int width, unsigned int height);
+	Window(const char *title, unsigned int width, unsigned int height);
 
     GLFWwindow* getWindow();
     int getShouldClose();

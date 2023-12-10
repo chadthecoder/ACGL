@@ -1,7 +1,7 @@
-#include "ACGL/GLFW.hpp"
+#include "ACGL/Window.hpp"
 
 // Constructor that generates a Elements Buffer Object and links it to indices
-GLFW::GLFW(const char *title, unsigned int width, unsigned int height) : title(title), width(width), height(height)
+Window::Window(const char *title, unsigned int width, unsigned int height) : title(title), width(width), height(height)
 {
 	// Initialize GLFW
 	glfwInit();
@@ -32,17 +32,12 @@ GLFW::GLFW(const char *title, unsigned int width, unsigned int height) : title(t
 }
 
 // Binds the EBO
-GLFWwindow* GLFW::getWindow()
+GLFWwindow* Window::getWindow()
 {
 	return window;
 }
 
-int GLFW::getShouldClose()
+int Window::getShouldClose()
 {
     return glfwWindowShouldClose(window);
 }
-
-/* void GLFW::makeContextCurrent()
-{
-    glfwMakeContextCurrent(window);
-} */
