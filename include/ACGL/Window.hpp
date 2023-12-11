@@ -11,8 +11,6 @@ class Window
 public:
 	GLFWwindow* window;
 
-	unsigned int testy;
-
     const unsigned int width, height;
 
     const char *title;
@@ -20,9 +18,11 @@ public:
 	//GLuint ID;
 	// Constructor that generates a Elements Buffer Object and links it to indices
 	Window(const char *title, unsigned int width, unsigned int height);
+	~Window();
 
     GLFWwindow* getWindow();
     int getShouldClose();
+	void swapBuffers();
     //void makeContextCurrent();
     
 	// Binds the EBO

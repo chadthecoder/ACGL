@@ -62,16 +62,15 @@ Shader::Shader(const char* vertexFile, const char* fragmentFile)
 
 }
 
+Shader::~Shader()
+{
+	glDeleteProgram(ID);
+}
+
 // Activates the Shader Program
 void Shader::Activate()
 {
 	glUseProgram(ID);
-}
-
-// Deletes the Shader Program
-void Shader::Delete()
-{
-	glDeleteProgram(ID);
 }
 
 // Checks if the different Shaders have compiled properly

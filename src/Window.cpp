@@ -31,6 +31,14 @@ Window::Window(const char *title, unsigned int width, unsigned int height) : tit
     glfwMakeContextCurrent(window);
 }
 
+Window::~Window()
+{
+	// Delete window before ending the program
+	glfwDestroyWindow(window);
+	// Terminate GLFW before ending the program
+	glfwTerminate();
+}
+
 // Binds the EBO
 GLFWwindow* Window::getWindow()
 {
@@ -40,4 +48,9 @@ GLFWwindow* Window::getWindow()
 int Window::getShouldClose()
 {
     return glfwWindowShouldClose(window);
+}
+
+void Window::swapBuffers()
+{
+	glfwSwapBuffers(window);
 }
