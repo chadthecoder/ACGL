@@ -66,3 +66,9 @@ void Window::uMatrix(Shader& shader, std::string uName)
 	// Updates and exports the camera matrix to the Vertex Shader
 	camera.Matrix(45.0f, 0.1f, 100.0f, shader, uName.data());
 }
+
+void Window::setBackgroundColor(glm::vec4 color)
+{
+	// Specify the color of the background
+	glClearColor(color.r, color.g, color.b, color.a);
+}
