@@ -4,6 +4,9 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include <ACGL/Camera.hpp>
+#include <ACGL/Shader.hpp>
+
 #include <iostream>
 
 class Window
@@ -11,18 +14,23 @@ class Window
 public:
 	GLFWwindow* window;
 
-    const unsigned int width, height;
+	Camera camera;
+
+    //const unsigned int width, height;
+	int width, height;
 
     const char *title;
     // ID reference of Elements Buffer Object
 	//GLuint ID;
 	// Constructor that generates a Elements Buffer Object and links it to indices
-	Window(const char *title, unsigned int width, unsigned int height);
+	Window(const char *title, unsigned int width, unsigned int height, glm::vec3 camPosition);
 	~Window();
 
     GLFWwindow* getWindow();
     int getShouldClose();
 	void swapBuffers();
+	void getInputs();
+	void uMatrix(Shader& shader, std::string uName);
     //void makeContextCurrent();
     
 	// Binds the EBO
