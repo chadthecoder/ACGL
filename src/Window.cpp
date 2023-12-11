@@ -72,3 +72,8 @@ void Window::setBackgroundColor(glm::vec4 color)
 	// Specify the color of the background
 	glClearColor(color.r, color.g, color.b, color.a);
 }
+
+void Window::bitClear(GLbitfield mask)
+{
+	glClear(mask);
+}

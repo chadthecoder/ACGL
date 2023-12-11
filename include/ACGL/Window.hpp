@@ -32,6 +32,7 @@ public:
 	void getInputs();
 	void uMatrix(Shader& shader, std::string uName);
 	void setBackgroundColor(glm::vec4 color);
+	void bitClear(GLbitfield mask);
     //void makeContextCurrent();
     
 	// Binds the EBO
