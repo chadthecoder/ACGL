@@ -18,7 +18,8 @@ set(CPP_DIR src)
 #set(HPP_DIR include)
 set(CPP ${CPP_DIR}/stb.cpp ${CPP_DIR}/VBO.cpp
     ${CPP_DIR}/VAO.cpp ${CPP_DIR}/Shader.cpp ${CPP_DIR}/Texture.cpp
-    ${CPP_DIR}/EBO.cpp ${CPP_DIR}/Camera.cpp ${CPP_DIR}/Window.cpp)
+    ${CPP_DIR}/EBO.cpp ${CPP_DIR}/Camera.cpp ${CPP_DIR}/Window.cpp
+    ${CPP_DIR}/Errors.cpp)
 #set(HPP ${HPP_DIR}/VBO.h ${HPP_DIR}/shaderClass.h lib/stb_image.h)
 #set(HPP_AND_CPP ${CPP} ${HPP})
 

@@ -4,6 +4,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include <ACGL/Errors.hpp>
 #include <ACGL/Camera.hpp>
 #include <ACGL/Shader.hpp>
 

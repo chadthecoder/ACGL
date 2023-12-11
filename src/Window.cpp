@@ -70,7 +70,7 @@ void Window::uMatrix(Shader& shader, std::string uName)
 void Window::setBackgroundColor(glm::vec4 color)
 {
 	// Specify the color of the background
-	glClearColor(color.r, color.g, color.b, color.a);
+	GLCall(glClearColor(color.r, color.g, color.b, color.a), __FILE__, __LINE__);
 }
 
 void Window::bitClear(GLbitfield mask)
