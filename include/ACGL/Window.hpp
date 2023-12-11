@@ -11,6 +11,8 @@ class Window
 public:
 	GLFWwindow* window;
 
+	unsigned int testy;
+
     const unsigned int width, height;
 
     const char *title;
